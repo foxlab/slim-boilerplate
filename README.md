@@ -8,8 +8,9 @@ A boilerplate using Silex, Cockpit CMS for the backend side and Grunt, SASS for 
 3. Run `npm install` from the root directory
 4. Run `composer install` from the root directory
 5. Run `grunt` (may require installing Grunt globally `npm install -g grunt-cli`)
-6. browse to http://localhost:8888/index_dev.php for dev
-7. browse to http://localhost:8888/cockpit/install for install Cockpit
+6. Run `composer run`
+7. browse to http://localhost:8888/index_dev.php for dev
+8. browse to http://localhost:8888/cockpit/install for install Cockpit
 
 More information about Cockpit CMS here: https://github.com/aheinze/cockpit
 
