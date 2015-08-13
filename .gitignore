@@ -4,3 +4,6 @@
 node_modules/
 *.css.map
 /vendor/
+/source/
+/web/img/
+/web/js/
