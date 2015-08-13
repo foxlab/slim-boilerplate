@@ -1,5 +1,4 @@
 module.exports = function(grunt) {
-
     require('time-grunt')(grunt);
     require('jit-grunt')(grunt, {
         scsslint: 'grunt-scss-lint'
@@ -19,7 +18,9 @@ module.exports = function(grunt) {
             css: "web/css",
             js: "web/js",
             js_dev: "source/js",
-            js_partials: "source/js/components"
+            js_partials: "source/js/components",
+            img_dev: "source/img",
+            img: "web/img"
         },
 
         /*
@@ -27,7 +28,7 @@ module.exports = function(grunt) {
         ==================================== */
         concurrent: {
             build: {
-                tasks: ['build:js', 'build:css'],
+                tasks: ['build:js', 'build:css', 'build:img'],
                 options: {
                     logConcurrentOutput: false
                 }
@@ -48,6 +49,13 @@ module.exports = function(grunt) {
             concat: {
                 files: ['<%= project.js_dev %>/**/*.js'],
                 tasks: ['build:js'],
+                options: {
+                    livereload: true,
+                }
+            },
+            img: {
+                files: ['<%= project.img_dev %>/**/*.{png,jpg,gif}'],
+                tasks: ['build:img'],
                 options: {
                     livereload: true,
                 }
@@ -155,6 +163,23 @@ module.exports = function(grunt) {
             }
         },
 
+        /*
+            Image Min
+        ==================================== */
+        imagemin: {
+            dist: {
+                options: {
+                    optimizationLevel: 5
+                },
+                files: [{
+                    expand: true,
+                    cwd: '<%= project.img_dev %>',
+                    src: ['**/*.{png,jpg,gif}'],
+                    dest: '<%= project.img %>'
+                }]
+            }
+        }
+
     });
 
     /* ====================================
@@ -178,6 +203,10 @@ module.exports = function(grunt) {
     grunt.registerTask('build:css', [
         'sass:dev',
         'autoprefixer'
+    ]);
+
+    grunt.registerTask('build:img', [
+        'imagemin'
     ]);
 
     grunt.registerTask('lint', [
