@@ -6,9 +6,10 @@ A boilerplate using Silex, Cockpit CMS for the backend side and Grunt, SASS for 
 1. Clone this repo from `git@github.com:foxlab/slim-boilerplate.git`
 2. Run `npm install` from the root directory
 3. Run `composer install` from the root directory
-4. Run `grunt` (may require installing Grunt globally `npm install -g grunt-cli`)
-5. browse to http://localhost:8888/index_dev.php for dev
-6. browse to http://localhost:8888/cockpit/install for install Cockpit
+4. Run `COMPOSER_PROCESS_TIMEOUT=0.0 composer run` from the root directory
+5. Run `grunt` (may require installing Grunt globally `npm install -g grunt-cli`)
+6. browse to http://localhost:8888/index_dev.php for dev
+7. browse to http://localhost:8888/cockpit/install for install Cockpit
 
 More information about Cockpit CMS here: https://github.com/aheinze/cockpit
 
