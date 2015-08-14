@@ -1,9 +1,0 @@
-.DS_Store
-.sass-cache
-*.scssc
-node_modules/
-/vendor/
-*.css.map
-/web/img/
-/web/js/
-/web/css/
