@@ -96,10 +96,7 @@ module.exports = function(grunt) {
             options: {
                 config: '.scss-lint.yml',
                 exclude: [
-                    '<%= project.sass %>/libs/*.scss',
-                    '<%= project.sass %>/foundation/_print.scss',
-                    '<%= project.sass %>/helpers/_mixins.scss',
-                    '<%= project.sass %>/helpers/_reset.scss'
+                    '<%= project.sass %>/libs/*.scss'
                 ]
             },
             all: [
