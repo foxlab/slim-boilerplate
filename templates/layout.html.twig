@@ -11,6 +11,12 @@
         <link rel="icon" type="image/png" href="images/favicon.png" />
     </head>
     <body>
+        <nav class="nav-collapse">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
         {% block content %}{% endblock %}
         <script src="{{ asset('/js/script__1.7.0.js') }}"></script>
         <script src="//localhost:35729/livereload.js"></script>
