@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
         <title>{% block title '' %} | Site name</title>
-        <meta name="description" content="">
+        <meta name="description" content="{% block seo_description '' %}">
         <meta name="author" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Facebook -->
+        <meta property="og:site_name" content="Site name">
+        <meta property="og:image" content="{% block seo_image '' %}">
+
+        <!-- Facebook page specifics -->
+        <meta property="og:title" content="{% block title '' %} | Site name">
+        <meta property="og:description" content="{% block seo_description '' %}">
+        <meta property="og:type" content="website">
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:url" content="">
+        <meta name="twitter:site" content="Site name">
+        <meta name="twitter:image" content="{% block seo_image '' %}">
+
+        <!-- Twitter page specifics -->
+        <meta name="twitter:title" content="{% block title '' %} | Site name">
+        <meta name="twitter:description" content="{% block seo_description '' %}">
+
+        <link rel="icon" type="image/png" href="{{ asset('img/favicon.png') }}">
+        <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="">
+
         <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
         <link href="{{ asset('/css/style__1.7.0.css') }}" rel="stylesheet" type="text/css" />
-        <link rel="icon" type="image/png" href="images/favicon.png" />
     </head>
     <body>
         <nav class="nav-collapse">
