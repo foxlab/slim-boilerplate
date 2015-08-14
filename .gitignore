@@ -2,8 +2,8 @@
 .sass-cache
 *.scssc
 node_modules/
-*.css.map
 /vendor/
-/source/
+*.css.map
 /web/img/
 /web/js/
+/web/css/
